@@ -74,6 +74,10 @@ define('NONCE_SALT', env('NONCE_SALT'));
 define('AUTOMATIC_UPDATER_DISABLED', true);
 define('DISABLE_WP_CRON', env('DISABLE_WP_CRON') ?: false);
 define('DISALLOW_FILE_EDIT', true);
+define('FS_METHOD', 'direct');
+define('FTP_HOST', env('FTP_HOST') ?: '127.0.0.1');
+define('FTP_PASS', env('FTP_PASS'));
+define('FTP_USER', env('FTP_USER') ?: 'root');
 
 /**
  * Bootstrap WordPress
