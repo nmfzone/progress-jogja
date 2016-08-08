@@ -1,0 +1,47 @@
+@mixin nav-wrap($bg) {
+  .navbar {
+    border-radius: 0;
+    margin-top: 10px;
+    min-height: 30px !important;
+    background: $bg;
+  }
+}
+
+@mixin nav-link($color, $colorHover, $colorActive, $colorActiveHover, $bgActive, $bgActiveHover) {
+  .nav > li {
+    > a {
+      &:link {
+        color: $color;
+      }
+      &:visited {
+        color: $color;
+      }
+      &:hover {
+        color: $colorHover;
+      }
+    }
+    &.active {
+      > a {
+        color: $colorActive;
+        background-color: $bgActive;
+        &:link {
+          color: $colorActive;
+        }
+        &:hover {
+          color: $colorActiveHover;
+        }
+      }
+    }
+    font-family: "squares", Arial, Serif;
+    font-size: 10px;
+  }
+  .navbar-default .navbar-nav .active {
+    > a:hover {
+      color: $colorActiveHover;
+      background-color: $bgActiveHover;
+    }
+  }
+  .navbar-default {
+    border-color: #7a2225;
+  }
+}

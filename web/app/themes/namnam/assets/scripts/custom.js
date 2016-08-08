@@ -20,14 +20,18 @@
   woo_manip_once();
 
   // WooCommerce Manipulation
+  function changeCartBtn(area, btnType) {
+    var add_to_cart = $(area + ' .add_to_cart_button');
+    $(area + ' .button').removeClass().addClass('btn ' + btnType);
+    add_to_cart.addClass('add_to_cart_button ajax_add_to_cart btn ' + btnType);
+  }
   function woo_manip() {
     $('.quantity').css({'width': '60px'});
     $('input[name="coupon_code"]').css({'width': '100px', 'display': 'inline-block'});
 
     $('.submit').removeClass().removeAttr('id').addClass('btn btn-info');
-    var add_to_cart = $('.add_to_cart_button');
-    $('.button').removeClass().addClass('btn btn-info');
-    add_to_cart.addClass('add_to_cart_button ajax_add_to_cart btn btn-info');
+    changeCartBtn('.homepage', 'btn-danger');
+    changeCartBtn('.web', 'btn-info');
     $('.input-text').removeClass().addClass('form-control');
   }
   woo_manip();

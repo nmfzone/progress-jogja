@@ -22,8 +22,8 @@ body {
     width: 60%;
     > h3 {
       font-family: "squares", Arial, Serif;
-      color: #1a1e99;
-      border-bottom: 2px solid #FFF;
+      color: #F1980C;
+      border-bottom: 2px solid #F1980C;
       margin-bottom: 30px;
     }
   }
@@ -35,12 +35,15 @@ body {
     text-align: center;
     display: flex;
     a {
-      &:link {
-        color: #1a1e99;
+      &:link, &:visited {
+        color: #FFF;
       }
       .price {
-        color: #1a1e99;
+        color: #F1980C;
       }
+    }
+    h3 {
+      color: #F1980C;
     }
   }
   .content {
@@ -53,6 +56,8 @@ body {
     padding: 0 auto;
     align-items: center;
   }
+  @include nav-wrap(#7a2225);
+  @include nav-link(#F1980C, #f2e713, #f2e713, #F1980C, #333333, #333333);
 }
 
 .kendi-outer {
@@ -61,7 +66,7 @@ body {
 
 .kendi-tutup {
   height: 180px;
-  background: #F1980C;
+  background: rgb(206, 131, 13);
   @include bl-border-radius(180px);
   @include br-border-radius(180px);
   border-left: 2px solid #7A2225;
@@ -69,10 +74,10 @@ body {
 }
 
 .kendi-body {
-  margin-top: -80px;
+  margin-top: -120px;
   padding-top: 100px;
   padding-bottom: -20px;
-  background: #F1980C;
+  background: rgb(206, 131, 13);
   border-left: 2px solid #7A2225;
   border-right: 2px solid #7A2225;
   z-index: 10;
@@ -82,7 +87,7 @@ body {
 
 .kendi-bawah {
   z-index: 5;
-  background: #F1980C;
+  background: rgb(206, 131, 13);
   height: 400px;
   margin-top: -200px;
   border-radius: 50%;
@@ -91,51 +96,12 @@ body {
   border-bottom: 2px solid #7A2226;
 }
 
-.navbar {
-  border-radius: 0;
-  margin-top: 10px;
-  min-height: 30px !important;
-  background: #7a2225;
-}
-
-.nav > li {
-  > a:link {
-    color: #FFF;
-  }
-  > a:visited {
-    color: #FFF;
-  }
-  > a:hover {
-    color: #f2e713;
-  }
-  &.active {
-    > a:link {
-      color: #000;
-    }
-    > a:hover {
-      color: #f2e713;
-    }
-  }
-  font-family: "squares", Arial, Serif;
-  font-size: 10px;
-}
-
-.navbar-default .navbar-nav > li {
-  > a:hover {
-    color: #f2e713;
-  }
-}
-
-.navbar-default {
-  border-color: #7a2225;
-}
-
 .navbar-brand {
   .br-fst {
     font-family: "squares", Arial, Serif;
     font-size: 80px;
     font-weight: bold;
-    color: #1a1e99;
+    color: #F1980C;
   }
   .br-sec {
     font-family: verdana, arial, serif;
@@ -167,9 +133,11 @@ body {
       color: #FFD700;
     }
     .br-sec {
-      color: #3292c9;
+      color: #782124;
     }
   }
+  @include nav-wrap(#7a2225);
+  @include nav-link(#F1980C, #f2e713, #f2e713, #F1980C, #333333, #333333);
   .wrap {
     padding: 20px 20px 20px 50px;
   }
