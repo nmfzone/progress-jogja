@@ -9,11 +9,7 @@
 }
 
 body {
-  background: url('../images/Background.png') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: #b71d1f;
 }
 
 .homepage {
@@ -26,7 +22,7 @@ body {
     width: 60%;
     > h3 {
       font-family: "squares", Arial, Serif;
-      color: #FFF;
+      color: #1a1e99;
       border-bottom: 2px solid #FFF;
       margin-bottom: 30px;
     }
@@ -40,10 +36,10 @@ body {
     display: flex;
     a {
       &:link {
-        color: #FFF;
+        color: #1a1e99;
       }
       .price {
-        color: #FFF;
+        color: #1a1e99;
       }
     }
   }
@@ -139,7 +135,7 @@ body {
     font-family: "squares", Arial, Serif;
     font-size: 80px;
     font-weight: bold;
-    color: #FFF;
+    color: #1a1e99;
   }
   .br-sec {
     font-family: verdana, arial, serif;
